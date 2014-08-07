@@ -27,6 +27,7 @@ REDIS_DB = 0
 
 To override this default values, create a ``local_settings.py`` file and change these parameters to fit your needs.
 
+
 ## Run
 
 Run the following command:
@@ -36,6 +37,21 @@ python app.py
 ```
 
 and go to the following URL with your browser: ``http://localhost:5000/``.
+
+### Serve to the world
+
+If you want to expose this application on the network, you'll have to set your configuration as follows:
+
+```python
+HOST = '0.0.0.0'
+PORT = 8080
+```
+
+To run the application with this setup, you'll have to do it as root:
+
+```
+sudo /home/user/.virtualenvs/MYVIRTUALENV/bin/python app.py
+```
 
 ## Screen capture
 
