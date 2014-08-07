@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="{{ url_for('static', filename='marked.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='editor.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='editor.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <title>Editor</title>
+  </head>
+  <body>
+    <div class="editor-wrapper">
+
+	<div id="alert" class="alert alert-warning fade in" style="display: none;">
+		<span id="alert-content"></span>
+		<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+	</div>
+
+	<div class="btn-group">
+		<div class="btn-group">
+		    <button id="btn-files" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+		      <span class="glyphicon glyphicon-th-list"></span> Files
+		      <span class="caret"></span>
+		    </button>
+		    <ul id="fileList" class="dropdown-menu" role="menu">
+		    	<li class="divider"></li>
+		    	<li><a href="#" id="btn-new"><span class="glyphicon glyphicon-file"></span> New</a></li>
+		    </ul>
+		</div>
+
+		<button id="btn-save" type="button" class="btn btn-default disabled"><span class="glyphicon glyphicon-save"></span> Save</button>
+		<button id="btn-delete" type="button" class="btn btn-default disabled"><span class="glyphicon glyphicon-remove-circle"></span> Delete</button>
+		<button id="btn-sync" type="button" class="btn btn-default"><span class="glyphicon glyphicon-cloud"></span> Sync</button>
+	</div>
+	<hr>
+
+	<input id="title" class="title" type="text" placeholder="Title">
+	<input type="hidden" name="slug" id="slug">
+	<textarea id="editor" placeholder="Content here ...."></textarea>
+    </div>
+
+    <script src="//code.jquery.com/jquery-1.10.0.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='tools.js')}}"></script>
+  </body>
+</html>

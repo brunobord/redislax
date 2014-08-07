@@ -1,0 +1,16 @@
+@import url(//fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic|Roboto+Slab:400,700);
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto Slab', serif !important;
+  font-size: 14px !important;
+}
+.editor-wrapper {
+  max-width: 680px;
+  padding: 10px;
+  margin: 60px auto;
+}
+.CodeMirror pre {
+  font-family: 'Ubuntu Mono', monospace !important;
+}
