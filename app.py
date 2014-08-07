@@ -5,7 +5,8 @@ from flask.ext.redis import Redis
 from flask.ext.restful import reqparse, Api, Resource
 
 app = Flask(__name__)
-app.config.from_object('settings')
+app.config.from_pyfile('settings.py')
+app.config.from_pyfile('local_settings.py', silent=True)
 
 api = Api(app, prefix="/api")
 db = Redis(app)
@@ -68,4 +69,4 @@ api.add_resource(TextDetail, '/file/<slug>')
 api.add_resource(Sync, '/sync/')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host=app.config['HOST'], port=app.config['PORT'])
