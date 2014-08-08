@@ -15,6 +15,10 @@ $(document).ready(function() {
         $('#alert').show();
     }
 
+    function slugify(text) {
+        return text.toLowerCase().replace(/ /g,'-').replace(/[-]+/g, '-').replace(/[^\w-]+/g,'');
+    }
+
     $('#title').change(function() {
         var title = $('#title').val() || '';
         var slug = $('#slug').val() || '';
@@ -49,10 +53,11 @@ $(document).ready(function() {
 
 
     $('#btn-save').click(function() {
-        var slug = $('#slug').val() || prompt("Please enter the slug");
-        if (slug !== undefined && slug !== null && slug !== '') {
+        var title = $('#title').val() || prompt('Please enter the title');
+        if (title !== undefined && title !== null && title !== '') {
+            var slug = $('#slug').val() || slugify(title);
             $.post('/api/file/'+slug, {
-                title: $('#title').val() || prompt('Please enter the title'),
+                title: title,
                 content: editor.codemirror.getValue(),
             }, refreshEditor);
             showAlert("Saved file '"+$('#title').val() +"'");
