@@ -40,11 +40,10 @@ and go to the following URL with your browser: ``http://localhost:5000/``.
 
 ### Serve to the world
 
-If you want to expose this application on the network, you'll have to set your configuration as follows:
+If you want to expose this application on the network, you'll have to set your host parameter as follows:
 
 ```python
 HOST = '0.0.0.0'
-PORT = 8080
 ```
 
 To run the application with this setup, you'll have to do it as root:
@@ -53,9 +52,24 @@ To run the application with this setup, you'll have to do it as root:
 sudo /home/user/.virtualenvs/MYVIRTUALENV/bin/python app.py
 ```
 
+Of course, you can change the port if you need it.
+
 ## Screen capture
 
 ![Screen capture](doc/redislax.png)
+
+## Colophon
+
+* [Flask](http://flask.pocoo.org/), [Flask-restful](https://github.com/twilio/flask-restful) and [Flask-And-Redis](https://github.com/playpauseandstop/Flask-And-Redis)
+* [Editor.js](https://github.com/lepture/editor),
+  by Hsiaoming Yang.
+* [Glyphicons icons](http://glyphicons.com/),
+* [JQuery](http://jquery.com),
+* Fonts are [Ubuntu Mono](http://font.ubuntu.com/),
+  [Roboto Slab](http://www.google.com/fonts/specimen/Roboto+Slab), provided by
+  [Google Webfonts](https://www.google.com/fonts/)
+* Responsive grid by the [Twitter Bootstrap](http://getbootstrap.com/)
+
 
 ## License
 
