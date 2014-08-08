@@ -15,6 +15,10 @@ $(document).ready(function() {
         $('#alert').show();
     }
 
+    $('#btn-close-alert').click(function() {
+        $('#alert').hide();
+    });
+
     function slugify(text) {
         return text.toLowerCase().replace(/ /g,'-').replace(/[-]+/g, '-').replace(/[^\w-]+/g,'');
     }
