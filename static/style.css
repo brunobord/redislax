@@ -6,10 +6,9 @@ body {
   font-family: 'Roboto Slab', serif !important;
   font-size: 14px !important;
 }
-.editor-wrapper {
-  max-width: 680px;
-  padding: 10px;
-  margin: 60px auto;
+.container {
+    max-width: 660px;
+    padding: 10px;
 }
 .CodeMirror pre {
   font-family: 'Ubuntu Mono', monospace !important;
